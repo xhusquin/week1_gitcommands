@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 
 <html lang=fr>
-	<head>
-		<meta char= utf8>
-		<title>commandes Git/Github</title>
-	</head>
-	<body>
-		<h1>Commandes Git et Github</h1>
-		<section>
-			<h2>Sommaire</h2>
-			<ol>
-				<li>Installation de Git sur Linux avec un paquet apt</li>
-				<li>Configurer Git</li>
-				<li>Initialiser un dossier de travail</li>
-			</ol>
-		</section>
-		<article>
-			<h2>Installer Git (Debian)</h2>
-			<p>
-				Vérifier le statut 'installed' de Git:<br>
-				<code>apt list git</code><br>
-				Si besoin, installer le paquet:<br>
-				<code>sudo apt install git</code>
-			</p>
-		</article>
-		<article>
-			<h2>Configurer Git</h2>
-			<p>
-				Vérifier la configuration de Git:<br>
-				<code>git config --list</code><br>
-				Si besoin:<br>
-				<code>git --global</code>
-	</body>
+<head>
+	<meta charset= "UTF8">
+	<title>commandes Git/Github</title>
+</head>
+<body>
+	<h1>Commandes Git et Github depuis un terminal</h1>
+	<section>
+		<h2>Sommaire</h2>
+		<ol>
+			<li><a href="#instal">Installation de Git (Debian)</a></li>
+			<li><a href="#config">Configurer Git</a></li>
+			<li><a href="#init">Initialiser un nouveau dossier de travail</a></li>
+			<li><a href="#clone">Cloner un repertoire déjà éxistant</a></li>
+			<li><a href="#index">Indexer les fichiers (stage)</a></li>
+		</ol>
+	</section>
+	<article>
+		<h2 id="instal">Installer Git (Debian)</h2>
+		<p>
+		Vérifier le statut <em>installed</em> de Git:<br>
+		<code>apt list git</code><br>
+		Si besoin, installer le paquet:<br>
+		<code>sudo apt install git</code>
+		</p>
+	</article>
+	<article>
+		<h2 id="config">Configurer Git</h2>
+		<p>
+		Vérifier la configuration de Git:<br>
+		<code>git config --list</code><br>
+		Indispensable:<br>
+		<code>
+		git config --global user.name nom<br>
+		git config --global user.email tonmail
+		</code>
+		<br>
+		Optionnel:<br>
+		<code>
+		git config --global color.diff auto<br>
+		git config --global color.branch auto<br>
+		git config --global color.status auto
+		</code>
+		</p>
+		<p>
+		avec Bash, j'ai du suivre <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh" target="_blank">cette procedure</a> et l'adapter pour faire apparaitre le nom de ma branche git dans mon terminal.
+		</p>
+	</article>
+	<article>
+		<h2 id="init">Initialiser un dossier de travail</h2>
+		<p>
+		Après avoir créer et naviguer vers un dossier de travail avec les commandes <code>cd</code> et <code>mkdir</code> :<br>
+		<code>git init</code>
+		</p>
+	</article>
+	<article>
+		<h2 id="clone">Cloner un repertoire (depuis Github)</h2>
+		<p>
+		Copier le lien du dépot sur Github<br>
+		Naviguer vers le repertoire désiré puis:<br>
+		<code>git clone [coller ici le lien]</code><br>
+		Il est possible de rajouter aprés le lien un nouveau nom pour le dépot.
+		</p>
+	</article>
+	<article>
+		<h2 id="index">Indexer les fichiers (stage)</h2>
+		<p>
+		<code>git status</code> pour voir les fichiers à indexer.<br>
+		<code>git add nomduficher</code> pour indexer.<br>
+		On peut utiliser <code>git add *</code> pour indexer tous les fichiers.
+		</p>
+	</article>
+</body>
 </html>

@@ -6,7 +6,7 @@
 	<title>commandes Git/Github</title>
 </head>
 <body>
-	<h1>Commandes Git et Github depuis un terminal</h1>
+	<h1>Commandes Git et Github de bases depuis un terminal</h1>
 	<section>
 		<h2>Sommaire</h2>
 		<ol>
@@ -15,12 +15,18 @@
 			<li><a href="#init">Initialiser un nouveau dossier de travail</a></li>
 			<li><a href="#clone">Cloner un repertoire déjà éxistant</a></li>
 			<li><a href="#index">Indexer les fichiers (stage)</a></li>
+			<li><a href="#commit">Valider la nouvelle version (commit)</a></li>
+			<li><a href="#push">Mette à jour le dépot distant (github)</a></li>
 		</ol>
+	</section>
+	<section>
+		<img src="/images/Diagramme sans nom.drawio.png"
+		 alt="Diagrameme du fonctionnement des commandes de bases">
 	</section>
 	<article>
 		<h2 id="instal">Installer Git (Debian)</h2>
 		<p>
-		Vérifier le statut <em>installed</em> de Git:<br>
+		Vérifier le statut de Git <em>(installed)</em>:<br>
 		<code>apt list git</code><br>
 		Si besoin, installer le paquet:<br>
 		<code>sudo apt install git</code>
@@ -61,7 +67,7 @@
 		Copier le lien du dépot sur Github<br>
 		Naviguer vers le repertoire désiré puis:<br>
 		<code>git clone [coller ici le lien]</code><br>
-		Il est possible de rajouter aprés le lien un nouveau nom pour le dépot.
+		Il est possible de rajouter un nouveau nom de dossier aprés le lien copié.
 		</p>
 	</article>
 	<article>
@@ -70,6 +76,18 @@
 		<code>git status</code> pour voir les fichiers à indexer.<br>
 		<code>git add nomduficher</code> pour indexer.<br>
 		On peut utiliser <code>git add *</code> pour indexer tous les fichiers.
+		</p>
+	</article>
+	<article>
+		<h2 id="commit">Valider la version (Commit)</h2>
+		<p>
+		<code>git commit -m "message de commit"</code><br>
+		</p>
+	</article>
+	<article>
+		<h2 id="push">Mettre à jour le dépot distant</h2>
+		<p>
+			<code>git push</code>
 		</p>
 	</article>
 </body>

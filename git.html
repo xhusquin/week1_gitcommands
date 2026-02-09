@@ -1,94 +1,78 @@
 <!DOCTYPE html>
 
-<html lang=fr>
+<html lang="fr">
 <head>
-	<meta charset= "UTF8">
-	<title>commandes Git/Github</title>
+	<meta charset="UTF-8">
+	<title>commandes Git/GitHub</title>
 </head>
 <body>
-	<h1>Commandes Git et Github de bases depuis un terminal</h1>
+	<h1>Commandes Git et GitHub de base depuis un terminal</h1>
 	<section>
 		<h2>Sommaire</h2>
 		<ol>
 			<li><a href="#instal">Installation de Git (Debian)</a></li>
 			<li><a href="#config">Configurer Git</a></li>
 			<li><a href="#init">Initialiser un nouveau dossier de travail</a></li>
-			<li><a href="#clone">Cloner un repertoire déjà éxistant</a></li>
+			<li><a href="#clone">Cloner un répertoire déjà existant</a></li>
 			<li><a href="#index">Indexer les fichiers (stage)</a></li>
 			<li><a href="#commit">Valider la nouvelle version (commit)</a></li>
-			<li><a href="#push">Mette à jour le dépot distant (github)</a></li>
+			<li><a href="#push">Mettre à jour le dépôt distant (GitHub)</a></li>
 		</ol>
 	</section>
 	<section>
-		<img src="/images/Diagramme sans nom.drawio.png"
-		 alt="Diagrameme du fonctionnement des commandes de bases">
+		<img src="/images/Git_basicDiagram.png"
+		 alt="Diagramme du fonctionnement des commandes de bases">
 	</section>
 	<article>
 		<h2 id="instal">Installer Git (Debian)</h2>
-		<p>
-		Vérifier le statut de Git <em>(installed)</em>:<br>
-		<code>apt list git</code><br>
-		Si besoin, installer le paquet:<br>
-		<code>sudo apt install git</code>
-		</p>
+		<p>Vérifier le statut de Git <em>(installed)</em>:</p>
+		<pre><code>apt list git</code></pre>
+		<p>Si besoin, installer le paquet:</p>
+		<pre><code>sudo apt install git</code></pre>
 	</article>
 	<article>
 		<h2 id="config">Configurer Git</h2>
+		<p>Vérifier la configuration de Git:</p>
+		<pre><code>git config --list</code></pre>
+		<p>Indispensable:</p>
+		<pre><code>git config --global user.name nom
+git config --global user.email ton_mail</code></pre>
+		<p>Optionnel:</p>
+		<pre><code>git config --global color.diff auto
+git config --global color.branch auto
+git config --global color.status auto</code></pre>
 		<p>
-		Vérifier la configuration de Git:<br>
-		<code>git config --list</code><br>
-		Indispensable:<br>
-		<code>
-		git config --global user.name nom<br>
-		git config --global user.email tonmail
-		</code>
-		<br>
-		Optionnel:<br>
-		<code>
-		git config --global color.diff auto<br>
-		git config --global color.branch auto<br>
-		git config --global color.status auto
-		</code>
-		</p>
-		<p>
-		avec Bash, j'ai du suivre <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh" target="_blank">cette procedure</a> et l'adapter pour faire apparaitre le nom de ma branche git dans mon terminal.
+		avec Bash, j'ai dû suivre <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh" target="_blank">cette procédure</a> et l'adapter pour faire apparaître le nom de ma branche git dans mon terminal.
 		</p>
 	</article>
 	<article>
 		<h2 id="init">Initialiser un dossier de travail</h2>
-		<p>
-		Après avoir créer et naviguer vers un dossier de travail avec les commandes <code>cd</code> et <code>mkdir</code> :<br>
-		<code>git init</code>
-		</p>
+		<p>Après avoir créer et naviguer vers un dossier de travail avec les commandes <code>cd</code> et <code>mkdir</code> :</p>
+		<pre><code>git init</code></pre>
 	</article>
 	<article>
-		<h2 id="clone">Cloner un repertoire (depuis Github)</h2>
+		<h2 id="clone">Cloner un repertoire (depuis GitHub)</h2>
 		<p>
-		Copier le lien du dépot sur Github<br>
-		Naviguer vers le repertoire désiré puis:<br>
-		<code>git clone [coller ici le lien]</code><br>
-		Il est possible de rajouter un nouveau nom de dossier aprés le lien copié.
+		Copier le lien du dépôt sur GitHub<br>
+		Naviguer vers le répertoire désiré puis:
 		</p>
+		<pre><code>git clone [coller ici le lien]</code></pre>
+		<p>Il est possible de rajouter un nouveau nom de dossier après le lien copié.</p>
 	</article>
 	<article>
 		<h2 id="index">Indexer les fichiers (stage)</h2>
-		<p>
-		<code>git status</code> pour voir les fichiers à indexer.<br>
-		<code>git add nomduficher</code> pour indexer.<br>
-		On peut utiliser <code>git add *</code> pour indexer tous les fichiers.
-		</p>
+		<pre><code>git status</code></pre>
+		<p>pour voir les fichiers à indexer.</p>
+		<pre><code>git add nom_du_fichier</code></pre>
+		<p>pour indexer.</p>
 	</article>
 	<article>
 		<h2 id="commit">Valider la version (Commit)</h2>
-		<p>
-		<code>git commit -m "message de commit"</code><br>
-		</p>
+		<pre><code>git commit -m "message de commit"</code></pre>
 	</article>
 	<article>
-		<h2 id="push">Mettre à jour le dépot distant</h2>
-		<p>
-			<code>git push</code>
-		</p>
+		<h2 id="push">Mettre à jour le dépôt distant</h2>
+		<pre><code>git push</code></pre>
 	</article>
 </body>
 </html>

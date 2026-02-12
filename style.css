@@ -1,0 +1,122 @@
+*{
+    font-family: "Noto Sans", sans-serif;
+}
+h1, h2{
+    font-family: "Share Tech", sans-serif;
+}
+body{
+    background: linear-gradient(160deg, #100944, #1F305E, black);
+    background-attachment: fixed;
+    margin: 0;
+}
+header{
+    background-color: #1F305E;
+    color: #AF6D4E;
+    border-bottom: 1px solid #FFFFF0;
+    padding: 10px 20px 0 20px;
+    margin: 0;
+    width: 100% - 40px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 15px 20px rgb(0 0 0 /0.2);
+    rotate: -0.2deg; 
+    transform-origin: top left;
+}
+header h1{
+    font-size: 3rem;
+    padding-right: 200px;
+}
+header h2{
+    margin: 0;
+}
+#contener_logo{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: -100px;
+}
+#logo{
+    position: relative;
+    top: 20px;
+    filter: drop-shadow(3px 3px 3px rgb(0 0 0 /0.2));
+    margin: 0 20px;
+}
+.sommaire{
+    margin: 40px 0 80px 0 ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color:#fffff024;
+    padding: 20px;
+    color: #FFFFF0;
+    font-size: 1.5rem;
+}
+.sommaire nav{
+    padding: 40px;
+    border: 2px solid #FFFFF0;
+    border-radius: 15px;
+}
+.sommaire h2{
+    padding: 0;
+    margin-top: 0;
+}
+.sommaire li{
+    padding-bottom: 20px;
+}
+.sommaire a{
+    color: #FFFFF0;
+}
+.fiches h2{
+    display:inline-block ;
+    background-color: #AF6D4E;
+    padding: 5px 10px;
+    border: 2px dashed #D2B48C;
+    border-radius: 5px;
+    margin: 0;
+    position: absolute;
+    top: -33px;
+    left: 10px;
+    rotate: -0.5deg;
+}
+code{
+    font-family: "Fira Code", monospace;
+    color: #FFFFF0;
+}
+pre{
+    background-color: black;
+    padding: 10px;
+    width: 540px;
+}
+.fiches{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 20px 6%;
+}
+.fiches section{
+    background-color: #D2B48C;
+    border: 5px dashed #AF6D4E;
+    width: 580px;
+    padding: 0 20px;
+    margin-top: 15px;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 5px 5px 20px 15px rgb(0 0 0 /0.2);
+}
+footer{
+    background-color: #1F305E;
+    border-top: 1px solid #FFFFF0;
+    color: #fffff07e;
+    text-align: right;
+    margin: 0 0 0 0;
+    padding: 20px 20px 5px 20px;
+    rotate: -0.2deg; 
+    transform-origin: bottom right;
+}
+footer p{
+   margin: 0;
+}

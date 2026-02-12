@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Premiers pas avec Git</title>
+	<link href="style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Share+Tech&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Découvrir Git : les bases et les commandes essentielles</h1>
+		<div id="contener_logo">
+			<h2>| Lien vers autre chose |</h2>
+			<img id="logo" src="/images/Git-Icon-White.svg" alt="Logo Git">
+		</div>
+	</header>
+	<main>
+		<div class="sommaire">
+			<nav>
+			<h2>Sommaire</h2>
+			<ol>
+				<li><a href="#instal">Installation de Git (Debian)</a></li>
+				<li><a href="#config">Configurer Git</a></li>
+				<li><a href="#init">Initialiser un nouveau dossier de travail</a></li>
+				<li><a href="#clone">Cloner un répertoire déjà existant</a></li>
+				<li><a href="#index">Indexer les fichiers (stage)</a></li>
+				<li><a href="#commit">Valider la nouvelle version (commit)</a></li>
+				<li><a href="#push">Mettre à jour le dépôt distant (GitHub)</a></li>
+			</ol>
+			</nav>
+			<section class="picture">
+				<img src="/images/Git_basicDiagram.png"
+				alt="Diagramme du fonctionnement des commandes de bases">
+			</section>
+		</div>
+		<div class="fiches">
+			<section>
+				<h2 id="instal">Installer Git (Debian)</h2>
+				<p>Vérifier le statut de Git <em>(installed)</em>:</p>
+				<pre><code>apt list git</code></pre>
+				<p>Si besoin, installer le paquet:</p>
+				<pre><code>sudo apt install git</code></pre>
+			</section>
+			<section>
+				<h2 id="config">Configurer Git</h2>
+				<p>Vérifier la configuration de Git:</p>
+				<pre><code>git config --list</code></pre>
+				<p>Indispensable:</p>
+				<pre><code>git config --global user.name nom
+	git config --global user.email ton_mail
+				</code></pre>
+				<p>Optionnel:</p>
+				<pre><code>
+	git config --global color.diff auto
+	git config --global color.branch auto
+	git config --global color.status auto
+				</code></pre>
+				<p>
+				avec Bash, j'ai dû suivre <a href="https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh" target="_blank">cette procédure</a> et l'adapter pour faire apparaître le nom de ma branche git dans mon terminal.
+				</p>
+			</section>
+			<section>
+				<h2 id="init">Initialiser un dossier de travail</h2>
+				<p>Après avoir créer et naviguer vers un dossier de travail avec les commandes <code>cd</code> et <code>mkdir</code> :</p>
+				<pre><code>git init</code></pre>
+			</section>
+			<section>
+				<h2 id="clone">Cloner un repertoire (depuis GitHub)</h2>
+				<p>
+				Copier le lien du dépôt sur GitHub<br>
+				Naviguer vers le répertoire désiré puis:
+				</p>
+				<pre><code>git clone [coller ici le lien]</code></pre>
+				<p>Il est possible de rajouter un nouveau nom de dossier après le lien copié.</p>
+			</section>
+			<section>
+				<h2 id="index">Indexer les fichiers (stage)</h2>
+				<pre><code>git status</code></pre>
+				<p>pour voir les fichiers à indexer.</p>
+				<pre><code>git add nom_du_fichier</code></pre>
+				<p>pour indexer.</p>
+			</section>
+			<section>
+				<h2 id="commit">Valider la version (Commit)</h2>
+				<pre><code>git commit -m "message de commit"</code></pre>
+			</section>
+			<section>
+				<h2 id="push">Mettre à jour le dépôt distant</h2>
+				<pre><code>git push</code></pre>
+			</section>
+		</div>
+	</main>
+	<footer>
+    <p>
+      Page réalisée dans le cadre de la semaine 1
+      d’apprentissage HTML & Git.
+    </p>
+  </footer>
+</body>
+</html>
